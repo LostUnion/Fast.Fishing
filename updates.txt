@@ -1,0 +1,5 @@
+- The "SIP3" module has been added
+- Added date verification
+- Added a function for generating the main report
+- The function of getting data from the logger is implemented
+- Implemented the addition of a login and password for the logger
