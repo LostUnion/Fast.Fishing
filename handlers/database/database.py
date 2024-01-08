@@ -22,10 +22,10 @@ def login_and_password_input(service: str):
         log = get_login(service)
         pas = get_password(service)
         if log is None and pas is None:
-            login = input('Enter your username from the account: ')
-            password = input('Enter your password from the account: ')
+            login = input(f'[{service}] Enter your username from the account: ')
+            password = input(f'[{service}] Enter your password from the account: ')
             if not login or not password:
-                print("Both login and password are required. Please try again.")
+                print(f"[{service}] Both login and password are required. Please try again.")
             else:
                 return login, password
         else:
@@ -38,9 +38,9 @@ def db_auth(service: str):
     if existing_entry is None:
         cur.execute(f"INSERT INTO auth VALUES (?, ?, ?)", (login, password, service))
         db.commit()
-        print("Inserted new login and password into the database.")
+        print(f"[{service}] Inserted new login and password into the database.")
     else:
-        print("Login and password already exist in the database.")
+        print(f"[{service}] Login and password already exist in the database.")
 
 def db_start():
     cur.execute("CREATE TABLE IF NOT EXISTS auth("

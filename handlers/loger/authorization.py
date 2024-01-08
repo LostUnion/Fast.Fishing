@@ -11,8 +11,6 @@ def times(Started_At_Updates, Finished_At_Updates):
 
     formatted_started_time = started_at.strftime("%Y-%m-%d %H:%M:00")
     formatted_finished_time = finished_at.strftime("%Y-%m-%d %H:%M:59")
-    
-    print(formatted_started_time, formatted_finished_time)
 
     return formatted_started_time, formatted_finished_time
 

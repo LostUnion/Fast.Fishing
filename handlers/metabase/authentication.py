@@ -27,10 +27,10 @@ def auth():
         if res.status_code == 200:
             cookies_dict = [
                 {
-                    "domain" : key.domain, 
-                    "name" : key.name, 
-                    "path" : key.path, 
-                    "value" : key.value
+                    "domain":key.domain, 
+                    "name":key.name, 
+                    "path":key.path, 
+                    "value":key.value
                 }
                 for key in session_1.cookies
             ]
@@ -39,9 +39,9 @@ def auth():
                 session_2.cookies.set(**cookies)
             break
         elif res.status_code == 401:
-            print(f'[STATUS {res.status_code}] Invalid username or password')
+            print(f'[metabase][STATUS {res.status_code}] Invalid username or password')
             delete_login_and_password('metabase')
         else:
             pass
 
-        print(f'[STATUS {res.status_code}] Metabase authentication.\n')
+        print(f'[metabase][STATUS {res.status_code}] Metabase authentication.\n')

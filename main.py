@@ -19,13 +19,20 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     db_start()
+
+    print('''__________                _____     _______________         ______  _____                  
+___  ____/______ ___________  /_    ___  ____/___(_)___________  /_ ___(_)_______ _______ _
+__  /_    _  __ `/__  ___/_  __/    __  /_    __  / __  ___/__  __ \__  / __  __ \__  __ `/
+_  __/    / /_/ / _(__  ) / /_  ___ _  __/    _  /  _(__  ) _  / / /_  /  _  / / /_  /_/ / 
+/_/       \__,_/  /____/  \__/  _(_)/_/       /_/   /____/  /_/ /_/ /_/   /_/ /_/ _\__, /  
+                                                                                  /____/   ''')
     
     #Metabase
     auth()
     data_json, call_id = collect_information(args.call)
     path, path_to_log = floders_add(call_id)
-    file_name, path, path_to_log, Started_At_Updates, Finished_At_Updates = format_data(path, path_to_log, data_json)
-    print(f'Call status {data_json[20]}')
+    file_name, path, path_to_log, Started_At_Updates, Finished_At_Updates = format_data(path, path_to_log, data_json, call_id)
+    print(f'[metabase] Call status {data_json[20]}')
     csv_to_xlsx(file_name, path, data_json[0])
     govorun_path = govorun_download(data_json[1], path, call_id)
     search_errors(govorun_path)
@@ -35,4 +42,5 @@ if __name__ == "__main__":
 
     #LOGS
     get_info(call_id, Started_At_Updates, Finished_At_Updates, path)
+    
     

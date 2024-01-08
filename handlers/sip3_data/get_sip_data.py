@@ -33,8 +33,8 @@ def sip(external_id, path):
                 }
 
         res = requests.post(URL, headers=headers, json=payload)
-        print(f'[{res.status_code}] Connecting to SIP3')
-        print('Getting information from SIP3')
+        print(f'[sip3][{res.status_code}] Connecting to SIP3')
+        print('[sip3] Getting information from SIP3\n')
         
         link_sip = f'http://172.16.4.19/#/search/advanced?created_at={res.json()[0]['created_at']}&terminated_at={res.json()[0]['terminated_at']}&query=sip.call_id={res.json()[0]['call_id'][0]}'
         
@@ -64,7 +64,5 @@ def sip(external_id, path):
         cell.hyperlink = cell.value
         
         wb.save(ready_mate_data)
-            
-        print(link_sip)
     except:
-        print('[SIP3] The data was not found, request the current call ID.')
+        print('[sip3] The data was not found, request the current call ID.')

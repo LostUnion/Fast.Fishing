@@ -10,7 +10,7 @@ def formatted_time(original_time):
         parsed_time = datetime.strptime(original_time, "%Y-%m-%dT%H:%M:%SZ")
         return parsed_time.strftime("%Y/%m/%d %H:%M")
 
-def format_data(path, path_to_log, data_json):
+def format_data(path, path_to_log, data_json, call_id):
     
     times = [data_json[15], data_json[16], data_json[17], data_json[18], data_json[19], data_json[24]]
     
@@ -67,7 +67,8 @@ def format_data(path, path_to_log, data_json):
     ]
     
     ready_mate = [
-        ['ID', data_json[0]], 
+        ['ID', data_json[0]],
+        ['Link to Metabase', f'http://10.17.19.182:3001/dashboard/2-poisk-dialoga-novogo-bota-cis-vhod-chat?%25D0%25B8%25D0%25B4={call_id}'],
         ['Link to Log', data_json[1]],
         ['Bot ID', data_json[2]],
         ['Dialog ID', data_json[3]],

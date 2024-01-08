@@ -3,3 +3,5 @@
 - Added a function for generating the main report
 - The function of getting data from the logger is implemented
 - Implemented the addition of a login and password for the logger
+- Implemented the addition of a link to the database
+- Error handling is implemented

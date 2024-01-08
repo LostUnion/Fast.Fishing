@@ -38,4 +38,4 @@ def csv_to_xlsx(file_name, path, Id):
             
     wb.save(excel_file)
     os.remove(f'{path}/ready_mate_data.csv')
-    print(f'The table for the call {Id} has been formed!')
+    print(f'[metabase] The table for the call {Id} has been formed!')
