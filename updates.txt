@@ -5,3 +5,4 @@
 - Implemented the addition of a login and password for the logger
 - Implemented the addition of a link to the database
 - Error handling is implemented
+- Fixed formatting of the log link

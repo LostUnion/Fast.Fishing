@@ -35,5 +35,5 @@ Libraries in this project
 
 [![Python](https://img.shields.io/badge/Python-3.12-brightgreen?logo=python&color=orange)](https://www.python.org/downloads/) [![Requests](https://img.shields.io/badge/Requests-2.31-brightgreen?logo=Requests&color=green)](https://requests.readthedocs.io/en/latest/)
 
-<i>Version 1.0.0 | Release Date: January 8, 2024</i>
+<i>Version 1.0.1 | Release Date: January 10, 2024</i>
 </div>

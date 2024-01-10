@@ -1,16 +1,16 @@
 import os
 import argparse
-from handlers.database.database import db_start
-from handlers.metabase.authentication import auth
-from handlers.metabase.collection_by_call import collect_information
-from handlers.metabase.creating_folders import floders_add
-from handlers.metabase.convert_csv_to_xlsx import csv_to_xlsx
-from handlers.metabase.download_log import govorun_download
-from handlers.metabase.error_detection import search_errors
-from handlers.metabase.formatting_the_data import format_data
-from handlers.sip3_data.checking_the_date import check_date
-from handlers.sip3_data.get_sip_data import sip
-from handlers.loger.authorization import get_info
+from src.database.database import db_start
+from src.metabase.authentication import auth
+from src.metabase.collection_by_call import collect_information
+from src.metabase.creating_folders import floders_add
+from src.metabase.convert_csv_to_xlsx import csv_to_xlsx
+from src.metabase.download_log import govorun_download
+from src.metabase.error_detection import search_errors
+from src.metabase.formatting_the_data import format_data
+from src.sip3_data.checking_the_date import check_date
+from src.sip3_data.get_sip_data import sip
+from src.loger.authorization import get_info
 
 if __name__ == "__main__":
     os.system('cls')
