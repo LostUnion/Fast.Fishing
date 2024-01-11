@@ -1,6 +1,6 @@
 import sqlite3 as sq
 
-db = sq.connect('handlers/database/authentication.db')
+db = sq.connect('src/database/authentication.db')
 cur = db.cursor()
 
 def delete_login_and_password(service):
